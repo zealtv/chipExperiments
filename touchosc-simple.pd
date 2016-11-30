@@ -1,0 +1,53 @@
+#N canvas 296 94 466 585 10;
+#X obj 33 25 netreceive -u -b 5051;
+#X obj 33 58 unpackOSC;
+#X obj 33 92 s osc;
+#X obj 35 143 r osc;
+#X floatatom 36 249 5 0 0 0 - - -, f 5;
+#X obj 36 181 routeOSC /1 /2 /3 /4;
+#X obj 36 213 routeOSC /fader1 /fader2 /fader3 /fader4 /fader5;
+#X obj 36 275 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 63 1;
+#X floatatom 102 249 5 0 0 0 - - -, f 5;
+#X obj 102 275 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6597 1;
+#X floatatom 169 249 5 0 0 0 - - -, f 5;
+#X obj 169 275 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6455 1;
+#X floatatom 235 251 5 0 0 0 - - -, f 5;
+#X obj 235 277 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5769 1;
+#X floatatom 302 251 5 0 0 0 - - -, f 5;
+#X obj 305 284 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8078 1;
+#X obj 33 539 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 33 434 r osc;
+#X obj 33 501 routeOSC /toggle1 /toggle2 /toggle3 /toggle4;
+#X obj 33 467 routeOSC /1;
+#X obj 109 535 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 185 536 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 262 534 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 6 1 8 0;
+#X connect 6 2 10 0;
+#X connect 6 3 12 0;
+#X connect 6 4 14 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 12 0 13 0;
+#X connect 14 0 15 0;
+#X connect 17 0 19 0;
+#X connect 18 0 16 0;
+#X connect 18 1 20 0;
+#X connect 18 2 21 0;
+#X connect 18 3 22 0;
+#X connect 19 0 18 0;

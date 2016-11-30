@@ -1,0 +1,6 @@
+#N canvas 694 125 243 164 10;
+#X obj 33 91 oscparse;
+#X obj 33 116 print reassembled;
+#X obj 34 50 netreceive -u -b 5051;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
