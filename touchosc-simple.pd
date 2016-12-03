@@ -1,53 +1,54 @@
-#N canvas 296 94 466 585 10;
+#N canvas 0 78 684 378 10;
 #X obj 33 25 netreceive -u -b 5051;
-#X obj 33 58 unpackOSC;
 #X obj 33 92 s osc;
 #X obj 35 143 r osc;
 #X floatatom 36 249 5 0 0 0 - - -, f 5;
-#X obj 36 181 routeOSC /1 /2 /3 /4;
-#X obj 36 213 routeOSC /fader1 /fader2 /fader3 /fader4 /fader5;
 #X obj 36 275 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 63 1;
+-1 -1 11285 1;
 #X floatatom 102 249 5 0 0 0 - - -, f 5;
 #X obj 102 275 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6597 1;
+-1 -1 181 1;
 #X floatatom 169 249 5 0 0 0 - - -, f 5;
 #X obj 169 275 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6455 1;
+-1 -1 2075 1;
 #X floatatom 235 251 5 0 0 0 - - -, f 5;
 #X obj 235 277 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5769 1;
+-1 -1 2809 1;
 #X floatatom 302 251 5 0 0 0 - - -, f 5;
 #X obj 305 284 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 8078 1;
+-1 -1 499 1;
 #X obj 33 539 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 33 434 r osc;
-#X obj 33 501 routeOSC /toggle1 /toggle2 /toggle3 /toggle4;
-#X obj 33 467 routeOSC /1;
 #X obj 109 535 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 185 536 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 262 534 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 3 0 5 0;
-#X connect 4 0 7 0;
+#X obj 33 58 osc/unpackOSC;
+#X obj 36 181 osc/routeOSC /1 /2 /3 /4;
+#X obj 36 213 osc/routeOSC /fader1 /fader2 /fader3 /fader4 /fader5
+;
+#X obj 33 467 osc/routeOSC /1;
+#X obj 33 501 osc/routeOSC /toggle1 /toggle2 /toggle3 /toggle4;
+#X connect 0 0 18 0;
+#X connect 2 0 19 0;
+#X connect 3 0 4 0;
 #X connect 5 0 6 0;
-#X connect 6 0 4 0;
-#X connect 6 1 8 0;
-#X connect 6 2 10 0;
-#X connect 6 3 12 0;
-#X connect 6 4 14 0;
-#X connect 8 0 9 0;
-#X connect 10 0 11 0;
-#X connect 12 0 13 0;
-#X connect 14 0 15 0;
-#X connect 17 0 19 0;
-#X connect 18 0 16 0;
-#X connect 18 1 20 0;
-#X connect 18 2 21 0;
-#X connect 18 3 22 0;
-#X connect 19 0 18 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 11 0 12 0;
+#X connect 14 0 21 0;
+#X connect 18 0 1 0;
+#X connect 19 0 20 0;
+#X connect 20 0 3 0;
+#X connect 20 1 5 0;
+#X connect 20 2 7 0;
+#X connect 20 3 9 0;
+#X connect 20 4 11 0;
+#X connect 21 0 22 0;
+#X connect 22 0 13 0;
+#X connect 22 1 15 0;
+#X connect 22 2 16 0;
+#X connect 22 3 17 0;
