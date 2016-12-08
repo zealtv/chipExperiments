@@ -4,7 +4,7 @@ This is where I'll dump my chip experimentations.  -- currently looking into osc
 set up openFrameworks see: https://github.com/zealtv/ofInstallChip
 
 install puredata:
-sudo apt-get install puredata pd-zexy pd-osc pd-comport
+sudo apt-get install puredata pd-zexy pd-osc pd-comport pd-hid
 
 get xbox 360 usb guitar hero controller running:
 sudo apt-get install xboxdrv
