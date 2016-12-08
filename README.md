@@ -5,4 +5,12 @@ set up openFrameworks see: https://github.com/zealtv/ofInstallChip
 
 install puredata:
 sudo apt-get install puredata pd-zexy pd-osc pd-comport
+
+get xbox 360 usb guitar hero controller running:
+sudo apt-get install xboxdrv
+cp org.seul.Xboxdrv.conf /etc/dbus-1/system.d/
+sudo reboot
+sudo xboxdrv -D --detach --silent 
 ```
+
+
