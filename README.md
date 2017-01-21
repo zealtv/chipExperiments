@@ -2,6 +2,7 @@ This is where I'll dump my chip experimentations.  -- currently looking into osc
 
 ```
 set up openFrameworks see: https://github.com/zealtv/ofInstallChip
+install python GPIO library: https://github.com/xtacocorex/CHIP_IO
 
 install puredata:
 sudo apt-get install puredata pd-zexy pd-osc pd-comport pd-hid
