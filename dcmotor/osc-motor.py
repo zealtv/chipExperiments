@@ -34,8 +34,16 @@ def motorBack():
 	GPIO.output(pin_forward, GPIO.LOW)
 	GPIO.output(pin_back, GPIO.HIGH)
 
-def motorSpeed(int p)
+def motorSpeed(p):
 	PWM.set_duty_cycle(pin_pwm, p)
+
+def motorDirection(d):
+	if(d == 0):
+		motorStop()
+	elif(d > 0):
+		motorForward()
+	elif(d < 0):
+		motorBack()
 
 def cleanup():
 	motorStop()
@@ -72,17 +80,22 @@ def test_handler(addr, tags, stuff, source):
 	print("---")
 
 
-def motorspeed_handler(add, tags, stuff, source):
+def motor_speed_handler(add, tags, stuff, source):
 	print("message received:")
 	motorSpeed(stuff[0])
 	print("Motor Speed %: ") 
 	print(stuff[0]) 
 
+def motor_direction_handler(add, tags, stuff, source):
+	print("message received:")
+	motorDirection(stuff[0])
+	print("Motor Direction is: ")
+	print(stuff[0])
 
 # adding my functions
 s.addMsgHandler("/test", test_handler)
-s.addMsgHandler("/motor/speed", motorspeed_handler)
-
+s.addMsgHandler("/motor/speed", motor_speed_handler)
+s.addMsgHandler("motor/direction", motor_direction_handler)
 # print out OSC handlers
 print("Registered Callback-functions are :")
 for addr in s.getOSCAddressSpace():
